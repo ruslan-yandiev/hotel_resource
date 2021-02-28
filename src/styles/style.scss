@@ -1,0 +1,62 @@
+@import '~normalize.css'; // ! так мы заимпортили подключили (благодаря webpack а не sass) файлы из node_modules
+@import 'color.scss';
+@import 'fonts.scss';
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: $color_1;
+}
+
+h2 {
+    color: $color_2;
+}
+
+@mixin size {
+    width: 300px;
+    height: 300px;
+}
+
+// * можем ставить дефолтные значения аргументов
+@mixin sizeAndColor($h, $w: 200px, $color: red) {
+    width: $w;
+    height: $h;
+    background: $color;
+}
+
+.main {
+    // @img установленный в конфиге webpack полный путь до папки img
+    background: url(@img/textile-2918844_960_720-min-min.jpg);
+    @include size;
+
+    // .main__test
+    &__test {
+        // * чтобы передать параметр внезовисимости от последовательности аргрументов
+        // * нужно указать  название аргумента и передать значение $color: yellow
+        // * Если же в миксине все попорядку, о такой гемор не нужен
+        @include sizeAndColor(100px, $color: yellow);
+    }
+}
+
+.code {
+    color: fuchsia;
+}
+
+.textClassinDiv {
+    color: red;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    // text-shadow: 3px 2px red;
+}
+
+.textShow {
+    color: red;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}

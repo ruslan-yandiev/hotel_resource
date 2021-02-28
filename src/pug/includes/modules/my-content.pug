@@ -1,0 +1,44 @@
+include ../../utils/mixins
+
+- var bull  = true;
+- var show  = "this is my new content";
+
+.content-container
+  h1 index page
+  h2 Hi
+  
+img(src="img/textile-2918844_960_720-min-min.jpg", alt="img")
+
+hr
+
+.logo
+  pre
+
+hr
+
+//- использовали миксиновую вставку
+section 
+  +item('title_1', 'my text')
+  +item('title_2', 'my text')
+  +item('title_3', 'my text')
+
+.main
+  .main__test 
+  .main__test
+
+
+if bull
+  .textClassinDiv.
+    Так мы можем писать
+    <b>многострочный</b> текст
+    без ошибок
+else
+  .textClassinDiv
+    p NO CONTENT!!!!!!!!
+
+if show
+  .textShow
+    p #{show}
+else
+  .textShow
+    p NO CONTENT!!!!!!!!

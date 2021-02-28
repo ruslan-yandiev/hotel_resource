@@ -1,0 +1,11 @@
+- var menuFooler = [{email: "ruslan@gmail.com"}, {adres: "Moscow"}];
+
+footer
+  .container
+    span footer is here
+    
+    nav.nav 
+      //- использование цикла
+      ul 
+        each value in menuFooler
+          li #{Object.keys(value)}: #{Object.values(value)}

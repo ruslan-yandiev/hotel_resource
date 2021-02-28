@@ -1,0 +1,5 @@
+node_modules
+заметка
+dist
+babel.config.json
+package-lock.json
