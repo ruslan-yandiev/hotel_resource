@@ -1,0 +1,28 @@
+//- подключим наш лояут
+//- ПОЗВОЛЯЕТ НАСЛЕДОВАТЬ ШАБЛОН ВНУТРИ PUG
+extends ../layout/main
+
+//- зададим наши переменные
+block variables
+  //- переменные указываем после -
+  -
+    var title = "Webpack + pug"
+    var description = "description for Webpack + pug";
+  //- или так каждую:
+  - var pageClass = "index-page";
+
+//- наш основной блок с контентом
+block content
+  include ../includes/modules/my-content
+
+  //- Так как к лояуту(как основному исходнику) мы подклюючили Миксин мы можем использовали миксиновую вставку
+  section 
+    +item('title_1', 'my text')
+    +item('title_2', 'my text')
+    +item('title_3', 'my text')
+
+//- можем внедрить свой кастомный код
+//- block script
+//-   script(text="text/мой кастомный дополнительный javascript")
+//-     const a = 33;
+//-     let b = 'string';

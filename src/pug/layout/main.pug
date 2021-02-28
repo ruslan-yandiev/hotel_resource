@@ -1,0 +1,30 @@
+//- подключим файл с миксинами в лояут, чтобы могли использовать все у кого будет этот лояут
+include ../utils/mixins
+
+//- блок где будут определены значения переменных
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    meta(name="description", content=description)
+    //- если потребуется индивидуальные настройки в head то можно будет их установить задав блок
+    block head
+
+  body(class=pageClass)
+    .wrapper
+      //- подключим хедер
+      include ../includes/modules/header
+    
+      .content-wrapper
+        //- тут будет основной контент
+        block content
+
+      //- подключим футер
+      include ../includes/modules/footer
+
+    block script

@@ -1,0 +1,13 @@
+//- фактически как функция которая вернет div с классом item и вложенными тегами и аргументами
+mixin item(title, text)
+  .item
+    h2.item-title= title
+    p.item-text= text
+
+  mixin icon(name, mod)
+    if(mod)
+      svg(class="svg-icon icon-" + name + ' ' + mod)
+        use(xlink:href="img/sprites/sprite.svg#" + name)
+    else
+      svg(class="svg-icon icon-" + name)
+        use(xlink:href="img/sprites/sprite.svg#" + name)

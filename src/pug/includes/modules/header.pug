@@ -1,0 +1,16 @@
+- var text = 'header is here';
+- var menuValues = ["Главная", "О нас", "Работа", "Контакты"];
+
+header
+  .container
+    //- использование условия
+    if text
+      span #{text} 
+    else 
+      span это хедор
+    
+    nav.nav 
+      //- использование цикла
+      ul 
+        each value in menuValues
+          li #{value}
