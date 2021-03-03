@@ -1,6 +1,7 @@
-@import '~normalize.css'; // ! так мы заимпортили подключили (благодаря webpack а не sass) файлы из node_modules
+@import '~normalize.css';
 @import 'color.scss';
 @import 'fonts.scss';
+@import 'mixins.scss';
 
 body {
     font-family: 'Montserrat_400', sans-serif;
@@ -30,17 +31,7 @@ h3 {
     text-transform: uppercase;
 }
 
-@mixin size {
-    width: 300px;
-    height: 300px;
-}
-
-// * можем ставить дефолтные значения аргументов
-@mixin sizeAndColor($h, $w: 200px, $color: red) {
-    width: $w;
-    height: $h;
-    background: $color;
-}
+// =======================================
 
 .main {
     // @img установленный в конфиге webpack полный путь до папки img

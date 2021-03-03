@@ -1,5 +1,5 @@
 //- подключим файл с миксинами в лояут, чтобы могли использовать все у кого будет этот лояут
-include ../utils/mixins
+include ../pug/mixins
 
 //- блок где будут определены значения переменных
 block variables
@@ -18,13 +18,13 @@ html(lang="en")
   body(class=pageClass)
     .wrapper
       //- подключим хедер
-      include ../includes/modules/header
+      include ../blocks_modules/header/header
     
       .content-wrapper
         //- тут будет основной контент
         block content
 
       //- подключим футер
-      include ../includes/modules/footer
+      include ../blocks_modules/footer/footer
 
     block script

@@ -1,6 +1,6 @@
 //- подключим наш лояут
 //- ПОЗВОЛЯЕТ НАСЛЕДОВАТЬ ШАБЛОН ВНУТРИ PUG
-extends ../layout/main
+extends ../layouts/main
 
 //- зададим наши переменные
 block variables
@@ -13,7 +13,7 @@ block variables
 
 //- наш основной блок с контентом
 block content
-  include ../includes/modules/my-content
+  include ../blocks_modules/my-content
 
   //- Так как к лояуту(как основному исходнику) мы подклюючили Миксин мы можем использовали миксиновую вставку
   section 
