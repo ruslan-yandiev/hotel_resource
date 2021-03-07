@@ -6,7 +6,7 @@
 $minwidth: 320px;
 
 // * Общая ширина контейнера с контентом для всего ресурса
-$mw: 970;
+$mw: 1180;
 $md1: $mw + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -57,7 +57,7 @@ h3 {
 ._container {
     max-width: $mw + px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 
     // @media (max-width: $md1+px) {
     //     max-width: 970px;

@@ -1,0 +1,29 @@
+include ../button/button-mix
+- var btn_collection = [['log-in', 'войти'], ['sign-up', 'зарегистрироваться']];
+
+header.header
+  .header__container._container
+    .icon-menu
+      span 
+      span 
+      span
+
+    a.header__logo(href="/")
+      img(src="img/Logo.svg", alt="img")
+    .header__menu.menu
+      nav.menu__body
+        ul.menu__list
+          li
+            a(href="").menu__list О нас
+          li
+            a(href="").menu__list Услуги
+          li
+            a(href="").menu__list Вакансии
+          li
+            a(href="").menu__list Новости
+          li
+            a(href="").menu__list Соглашения
+      
+    .header__actions.actions-header
+      .actions-header__btn
+        +btn(btn_collection)

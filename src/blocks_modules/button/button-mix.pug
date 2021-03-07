@@ -1,0 +1,10 @@
+- var text_error = "XXXXXXXXXXXXXXXXXX";
+
+mixin btn(arr, btn_class = 'btn__')
+  .btn
+    - if(Array.isArray(arr))
+      - for (var i = 0; i < arr.length; i++)
+        div(class=btn_class+arr[i][0])
+          a(class=btn_class+arr[i][0]+'_main') #{arr[i][1]}
+    - else
+        a.btn-error #{text_error}
