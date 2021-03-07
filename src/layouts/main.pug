@@ -18,13 +18,13 @@ html(lang="en")
   body(class=pageClass)
     .wrapper
       //- подключим хедер
-      include ../blocks_modules/header/header
+      include ../blocks_modules/header_footer/header/header
     
       .content-wrapper
         //- тут будет основной контент
         block content
 
       //- подключим футер
-      include ../blocks_modules/footer/footer
+      include ../blocks_modules/header_footer/footer/footer
 
     block script
