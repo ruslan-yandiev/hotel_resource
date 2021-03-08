@@ -1,1 +1,79 @@
-// @import '../../styles/style.scss';
+@import '../../styles/style.scss';
+
+.header {
+    background-color: $white;
+    position: relative;
+    z-index: 50;
+
+    // .header__container
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    // .header__logo
+    &__logo {
+        position: relative;
+        z-index: 2;
+
+        width: 144px;
+    }
+
+    // .header__menu
+    &__menu {
+    }
+
+    // .header__actions
+    &__actions {
+    }
+}
+
+// .icon-menu {
+// }
+.menu {
+    padding: 0px 0px 0px 30px/950px * 100%;
+    flex: 1 1 auto;
+    // .menu__body
+    &__body {
+    }
+
+    // .menu__list
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0px 15px;
+        }
+    }
+
+    &__link {
+        letter-spacing: 1.4px;
+        color: red;
+        text-decoration: none;
+    }
+}
+.actions-header {
+    // .actions-header__btn
+    &__btn {
+    }
+}
+// .btn {
+
+//     // .btn__log-in
+//     &__log-in {
+
+//         // .btn__log-in_main
+//         &_main {
+//         }
+//     }
+
+//     // .btn__sign-up
+//     &__sign-up {
+
+//         // .btn__sign-up_main
+//         &_main {
+//         }
+//     }
+// }
