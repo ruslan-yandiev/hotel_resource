@@ -1,4 +1,4 @@
-- var btn_collection = [['log-in', 'войти'], ['sign-up', 'зарегистрироваться']];
+- var btn_collection = [['__log-in', 'войти'], ['__sign-up', 'зарегистрироваться']];
 
 header.header
   .header__container._container
@@ -25,4 +25,4 @@ header.header
       
     .header__actions.actions-header
       .actions-header__btn
-        +btn(btn_collection)
+        +btn(btn_collection, 'header-btn')

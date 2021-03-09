@@ -10,6 +10,7 @@
         position: relative;
         display: flex;
         align-items: center;
+        height: 70px;
     }
 
     // .header__logo
@@ -50,7 +51,7 @@
 
     &__link {
         letter-spacing: 1.4px;
-        color: red;
+        color: $Dark_Shade_50;
         text-decoration: none;
     }
 }
@@ -59,21 +60,21 @@
     &__btn {
     }
 }
-// .btn {
 
-//     // .btn__log-in
-//     &__log-in {
+.header-btn {
+    display: flex;
 
-//         // .btn__log-in_main
-//         &_main {
-//         }
-//     }
+    // .header-btn__log-in
+    &__log-in {
+        // .header-btn__log-in_main
+        &_main {
+        }
+    }
 
-//     // .btn__sign-up
-//     &__sign-up {
-
-//         // .btn__sign-up_main
-//         &_main {
-//         }
-//     }
-// }
+    // .header-btn__sign-up
+    &__sign-up {
+        // .header-btn__sign-up_main
+        &_main {
+        }
+    }
+}

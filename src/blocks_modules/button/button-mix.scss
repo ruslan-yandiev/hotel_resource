@@ -1,0 +1,8 @@
+@import '../../styles/style.scss';
+
+// * можем ставить дефолтные значения аргументов
+@mixin sizeAndColor($h, $w: 200px, $color: red) {
+    width: $w;
+    height: $h;
+    background: $color;
+}
