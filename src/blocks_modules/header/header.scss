@@ -45,7 +45,7 @@
         justify-content: center;
 
         li {
-            margin: 0px 15px;
+            margin: 0px 10px;
         }
     }
 
@@ -66,15 +66,21 @@
 
     // .header-btn__log-in
     &__log-in {
-        // .header-btn__log-in_main
+        margin: 0px 20px 0px 10px;
+        @include buttonAppearance(34px, 87px, $white, $border: true);
+
         &_main {
+            @include centeringContentInl-Flex;
         }
     }
 
     // .header-btn__sign-up
     &__sign-up {
+        @include buttonAppearance(34px, 196px);
+
         // .header-btn__sign-up_main
         &_main {
+            @include centeringContentInl-Flex;
         }
     }
 }
