@@ -15,9 +15,10 @@
 
     // .header__logo
     &__logo {
+        display: flex;
+        align-items: center;
         position: relative;
         z-index: 2;
-
         width: 144px;
     }
 
@@ -71,6 +72,8 @@
 
         &_main {
             @include centeringContentInl-Flex;
+            font-family: 'Montserrat_700';
+            color: $Purple;
         }
     }
 
@@ -81,6 +84,8 @@
         // .header-btn__sign-up_main
         &_main {
             @include centeringContentInl-Flex;
+            font-family: 'Montserrat_700';
+            color: $white;
         }
     }
 }
