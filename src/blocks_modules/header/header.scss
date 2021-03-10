@@ -19,7 +19,7 @@
         align-items: center;
         position: relative;
         z-index: 2;
-        width: 144px;
+        max-width: 100%;
     }
 
     // .header__menu
@@ -51,7 +51,6 @@
     }
 
     &__link {
-        letter-spacing: 1.4px;
         color: $Dark_Shade_50;
         text-decoration: none;
     }
