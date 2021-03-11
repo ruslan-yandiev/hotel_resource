@@ -1,4 +1,6 @@
 @import '../../styles/style.scss';
+// TODO почему то размер кнопки входа великоват, страннно, исправить
+// TODO шрифт кажется, что нисковат
 
 .header {
     background-color: $white;
@@ -34,8 +36,8 @@
 // .icon-menu {
 // }
 .menu {
-    padding: 0px 0px 0px 30px/950px * 100%;
-    flex: 1 1 auto;
+    flex-grow: 1;
+
     // .menu__body
     &__body {
     }
@@ -43,7 +45,7 @@
     // .menu__list
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: end;
 
         li {
             margin: 0px 10px;
