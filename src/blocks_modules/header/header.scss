@@ -1,6 +1,6 @@
 @import '../../styles/style.scss';
 // TODO почему то размер кнопки входа великоват, страннно, исправить
-// TODO шрифт кажется, что нисковат
+// TODO шрифт кажется, что низковат
 
 .header {
     background-color: $white;
@@ -37,13 +37,43 @@
     }
 }
 
-// .icon-menu {
-// }
 .menu {
     flex: 1 0 auto;
 
+    @media (max-width: $md3+px) {
+        flex: 0 0 auto;
+    }
+
     // .menu__body
     &__body {
+        @media (max-width: $md3+px) {
+            background-color: #101113dc;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+
+            overflow: auto;
+            padding: 130px 0px 20px 0px;
+            opacity: 0;
+            transition: all 0.6s ease 0s;
+            text-align: center;
+
+            &:after {
+                content: '';
+                background-color: #1c242a;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+            }
+
+            &._active {
+                opacity: 1;
+            }
+        }
     }
 
     // .menu__list
@@ -54,13 +84,82 @@
         li {
             margin: 0px 10px;
         }
+
+        @media (max-width: $md3+px) {
+            display: block;
+
+            li {
+                margin: 0px 0px 30px 0px;
+                &:last-child {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
     }
 
     &__link {
         color: $Dark_Shade_50;
         text-decoration: none;
+
+        @media (min-width: 992px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            color: $white;
+            font-size: 24px;
+        }
     }
 }
+
+//Burger ===============================================
+.icon-menu {
+    @media (max-width: $md3+px) {
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+
+        span {
+            transition: all 0.6s ease 0s;
+            top: calc(50% - 1px);
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #bb9c66;
+
+            &:first-child {
+                top: 0px;
+            }
+            &:last-child {
+                top: auto;
+                bottom: 0px;
+            }
+        }
+
+        &._active {
+            span {
+                transform: scale(0);
+
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+                }
+
+                &:last-child {
+                    transform: rotate(45deg);
+                    bottom: calc(50% - 1px);
+                }
+            }
+        }
+    }
+}
+// /Burger =======================================/
+
 .actions-header {
     // .actions-header__btn
     &__btn {
