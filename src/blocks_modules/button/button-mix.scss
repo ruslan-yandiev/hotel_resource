@@ -6,6 +6,7 @@
     background: $color;
     border-radius: 22px;
     cursor: pointer;
+
     @if $border != false {
         border: 2px solid $Purple;
         box-sizing: border-box; // теперь будет расчитывать размер блока с учетом ширины рамки
