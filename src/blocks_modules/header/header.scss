@@ -3,7 +3,6 @@
 // TODO шрифт кажется, что низковат
 
 .header {
-    background-color: $white;
     position: relative;
     z-index: 50;
 
@@ -22,10 +21,11 @@
     // .header__logo
     &__logo {
         display: flex;
-        align-items: center;
-        position: relative;
         z-index: 2;
-        max-width: 100%;
+
+        @media (max-width: 561px) {
+            margin-right: 30px;
+        }
     }
 
     // .header__menu
@@ -115,7 +115,7 @@
     }
 }
 
-//Burger ===============================================
+//========/Burger/ =============================================/
 .icon-menu {
     @media (max-width: $md2+px) {
         position: relative;
@@ -159,9 +159,12 @@
         }
     }
 }
-// /Burger =======================================/
+// -- /Burger/ --------------------------------------------/
 
 .actions-header {
+    @media (max-width: 561px) {
+        display: none;
+    }
     // .actions-header__btn
     &__btn {
     }
