@@ -19,6 +19,12 @@ body {
     color: $Dark_Shade_75;
     font-size: 14px;
     line-height: 24px;
+
+    &._lock {
+        @media (max-width: $md2+px) {
+            overflow: hidden;
+        }
+    }
 }
 
 h1 {
