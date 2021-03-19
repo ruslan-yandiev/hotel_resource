@@ -81,14 +81,14 @@
         justify-content: flex-end;
         padding: 0;
 
-        li {
-            margin: 0px 10px;
-        }
-
         @media (max-width: $md2+px) {
             flex-direction: column;
+        }
 
-            li {
+        &_li {
+            margin: 0px 15px;
+
+            @media (max-width: $md2+px) {
                 margin: 0px 0px 30px 0px;
 
                 &:last-child {

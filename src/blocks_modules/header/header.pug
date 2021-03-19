@@ -1,4 +1,6 @@
 - var btn_collection = [['__log-in', 'войти'], ['__sign-up', 'зарегистрироваться']];
+- var list = ['Услуга 1', 'Услуга 2', 'Услуга 3'];
+- var list2 = ['Соглашение 1', 'Длинное название соглашения 2', 'Соглашение 3'];
 
 header.header
   .header__container._container
@@ -9,16 +11,16 @@ header.header
     .header__menu.menu
       nav.menu__body
         ul.menu__list
-          li
+          li.menu__list_li
             a(href="").menu__link О нас
-          li
-            a(href="").menu__link Услуги
-          li
+          li.menu__list_li
+            +accordion-menu('Услуги' , list)
+          li.menu__list_li
             a(href="").menu__link Вакансии
-          li
+          li.menu__list_li
             a(href="").menu__link Новости
-          li
-            a(href="").menu__link Соглашения
+          li.menu__list_li
+            +accordion-menu('Соглашения' , list2)
 
         +btn(btn_collection, 'header-btn-menu')
 

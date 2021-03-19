@@ -1,0 +1,52 @@
+@import '../../styles/color.scss';
+@import '../../styles/style.scss';
+
+// TODO реализовать закрытие меню после нажатия в любую область, переписать на чистый JS
+
+.accordion-menu {
+    display: flex;
+    justify-content: center;
+
+    padding: 0;
+
+    @media (max-width: $md2+px) {
+        flex-direction: column;
+    }
+}
+
+.dropdownlink {
+    cursor: pointer;
+    @media (max-width: $md2+px) {
+        color: $white;
+        font-size: 24px;
+    }
+}
+
+.submenuItems {
+    margin: 0;
+    padding: 0;
+
+    display: none;
+    background: $white;
+    margin-top: 20px;
+
+    li {
+        border-bottom: 1px solid #b6b6b6;
+    }
+
+    @media (min-width: $md2+px) {
+        position: absolute;
+        top: 50px;
+    }
+}
+
+.submenuItems a {
+    display: block;
+    color: $Dark_Shade_75;
+    padding: 12px 12px 12px 12px;
+    transition: all 0.4s ease-out;
+    &:hover {
+        background-color: $Purple;
+        color: $white;
+    }
+}

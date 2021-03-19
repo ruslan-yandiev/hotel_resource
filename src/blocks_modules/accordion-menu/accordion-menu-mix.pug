@@ -1,13 +1,9 @@
 mixin accordion-menu(text, arr)
   ul.accordion-menu
-    li
-      .dropdownlink
-        i(class="fa fa-road" aria-hidden="true")
-        | #{text}
-        i(class="fa fa-chevron-down" aria-hidden="true")
+    li.dropdownlink #{text}
       
-      - if(Array.isArray(arr))
-        ul.submenuItems
-          - for (var i = 0; i < arr.length; i++)
-            li
-              a(href="#") #{arr[i]}
+    - if(Array.isArray(arr))
+      ul.submenuItems
+        - for (var i = 0; i < arr.length; i++)
+          li
+            a(href="#") #{arr[i]}
