@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-
+// TODO переписать ве на чистый JS
 $(function () {
     var Accordion = function (el, multiple) {
         this.el = el || {};

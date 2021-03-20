@@ -2,15 +2,40 @@
 @import '../../styles/style.scss';
 
 // TODO реализовать закрытие меню после нажатия в любую область, переписать на чистый JS
-
+// TODO реализовать анимированную стрелку
 .accordion-menu {
+    padding: 0;
+}
+
+.accordion-menu__contener {
     display: flex;
     justify-content: center;
-
-    padding: 0;
+    align-items: center;
 
     @media (max-width: $md2+px) {
         flex-direction: column;
+    }
+}
+
+.accordion-menu__arrow {
+    order: 1;
+    margin: 0px 0px 0px 10px;
+
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid $Dark_Shade_50;
+    border-bottom: 2px solid $Dark_Shade_50;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    position: relative;
+    bottom: 1px;
+
+    @media (max-width: $md2+px) {
+        border-right: 2px solid $Purple;
+        border-bottom: 2px solid $Purple;
+        width: 10px;
+        height: 10px;
+        margin: 5px 0px 0px 0px;
     }
 }
 
@@ -32,6 +57,10 @@
 
     li {
         border-bottom: 1px solid #b6b6b6;
+    }
+
+    @media (max-width: $md2+px) {
+        width: 100%;
     }
 
     @media (min-width: $md2+px) {
