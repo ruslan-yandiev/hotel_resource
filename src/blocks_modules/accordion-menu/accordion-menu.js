@@ -1,5 +1,8 @@
 import * as $ from 'jquery';
 // TODO переписать ве на чистый JS
+// TODO реализовать выпадание меню при нажатии на стрелку
+// TODO Оптимизировать навешивание обработчика событий на стрелки
+// TODO Закрытие аккордиона при нажатии в любое место
 $(function () {
     var Accordion = function (el, multiple) {
         this.el = el || {};
@@ -26,4 +29,25 @@ $(function () {
     };
 
     var accordion = new Accordion($('.accordion-menu'), false);
+});
+
+let nontarget;
+
+document.querySelectorAll('.dropdownlink').forEach((elem) => {
+    elem.addEventListener('click', (event) => {
+        let list = event.target.previousSibling.classList;
+
+        if (nontarget) {
+            if (nontarget === list) {
+                list.toggle('_reverse_arrow');
+            } else {
+                if (nontarget.contains('_reverse_arrow')) nontarget.toggle('_reverse_arrow');
+                list.toggle('_reverse_arrow');
+            }
+        } else {
+            list.toggle('_reverse_arrow');
+        }
+
+        nontarget = list;
+    });
 });
