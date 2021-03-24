@@ -1,4 +1,5 @@
-@import '../../styles/color.scss';
+// TODO можно многое вынести в миксины
+
 @import '../../styles/style.scss';
 
 .accordion-menu {
@@ -25,7 +26,7 @@
     border-bottom: 2px solid $Dark_Shade_50;
     box-sizing: border-box;
     transform: rotate(45deg);
-    transition: all 0.5s ease 0s;
+    transition: all 0.3s ease 0s;
     position: relative;
     bottom: 1px;
 
@@ -40,13 +41,13 @@
 
 ._reverse_arrow {
     transform: rotate(-135deg);
-    transition: all 0.5s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .dropdownlink {
     cursor: pointer;
     @media (max-width: $md2+px) {
-        color: $white;
+        color: $Purple;
         font-size: 24px;
     }
 }
@@ -55,7 +56,12 @@
     margin: 0;
     padding: 0;
 
-    display: none;
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.8s ease 0s;
+
     background: $white;
     margin-top: 20px;
 
@@ -64,6 +70,7 @@
     }
 
     @media (max-width: $md2+px) {
+        display: none;
         width: 100%;
     }
 
@@ -77,9 +84,19 @@
     display: block;
     color: $Dark_Shade_75;
     padding: 12px 12px 12px 12px;
-    transition: all 0.4s ease-out;
+
     &:hover {
         background-color: $Purple;
         color: $white;
+    }
+}
+.visibility {
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.8s ease 0s;
+
+    @media (max-width: $md2+px) {
+        display: block;
     }
 }
