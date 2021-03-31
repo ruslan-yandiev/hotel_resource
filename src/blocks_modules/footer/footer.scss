@@ -1,0 +1,35 @@
+@import '../../styles/style.scss';
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 372px;
+}
+
+.footer-menu {
+    display: flex;
+    // background: rgb(138, 238, 113);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.darck100 {
+    color: $Dark_Shade_100;
+}
+
+.footer__bot {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    border-top: 1px solid $Dark_Shade_25;
+}
+
+.bot-right {
+    display: flex;
+}

@@ -1,11 +1,38 @@
 - var menuFooler = [{email: "ruslan@gmail.com"}, {adres: "Moscow"}];
 
-footer
-  .container
-    span footer is here
-    
-    nav.nav 
-      //- использование цикла
-      ul 
-        each value in menuFooler
-          li #{Object.keys(value)}: #{Object.values(value)}
+footer.footer
+  .footer__container._container
+    .footer__top
+      .footer-menu
+        .footer-content
+          a.footer-logo(href="/")
+            img(src="img/Logo.svg", alt="img")
+          .footer-logo__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды» 
+        .footer-content
+          span.darck100 навигация
+          span О нас
+          span Новости
+          span Служба поддержки
+          span Услуги
+        .footer-content
+          span.darck100 о нас
+          span О сервисе
+          span Наша команда
+          span Вакансии
+          span Инвесторы
+        .footer-content
+          span.darck100 Служба поддержки
+          span Соглашения
+          span Сообщества
+          span Связь с нами
+        .footer-content
+          span.darck100 Подписка
+          span Получайте специальные предложения и новости сервиса
+          .footer_email Email 
+
+    .footer__bot._container
+      .bot-left Copyright © 2018 Toxin отель. Все права защищены.
+      .bot-right
+        .bot-right__1 a
+        .bot-right__2 b
+        .bot-right__3 c
