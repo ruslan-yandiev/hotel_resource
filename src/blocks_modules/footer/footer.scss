@@ -2,32 +2,52 @@
 
 .footer__top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 372px;
 }
 
 .footer-menu {
     display: flex;
-    // background: rgb(138, 238, 113);
+    width: 100%;
+    justify-content: space-between;
+
+    &__ul {
+    }
+
+    &__link {
+        color: $Dark_Shade_50;
+        font-family: 'Montserrat_400', sans-serif;
+    }
+
+    &__list {
+        margin: 20px 0px 0px 0px;
+    }
+
+    li {
+        margin: 20px 0px 0px 0px;
+    }
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 40px;
+.footer-menu-logo {
+    max-width: 260px;
 }
 
 .darck100 {
     color: $Dark_Shade_100;
+    font-family: 'Montserrat_700', sans-serif;
+    font-size: 12px;
 }
 
 .footer__bot {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 70px;
     border-top: 1px solid $Dark_Shade_25;
+}
+
+.bot-left {
+    font-family: 'Montserrat_400', sans-serif;
 }
 
 .bot-right {

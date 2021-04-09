@@ -1,4 +1,4 @@
-@import '~normalize.css';
+// @import '~normalize.css'; // null как ни как удобнее чем normalize (субъективно)
 @import 'color.scss';
 @import 'mixins.scss';
 
@@ -6,7 +6,7 @@
 $minwidth: 320px;
 
 // * Общая ширина контейнера с контентом для всего ресурса
-$mw: 1160;
+$mw: 1200;
 $md1: $mw + 12;
 $md2: 918.98;
 $md3: 767.98;

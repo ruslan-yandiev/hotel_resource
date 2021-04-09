@@ -1,32 +1,32 @@
-@import '../../styles/style.scss';
+// @import '../../styles/style.scss';
 
-.main {
-    // @img установленный в конфиге webpack полный путь до папки img
-    background: url(@img/textile-2918844_960_720-min-min.jpg);
-    @include size;
+// .main {
+//     // @img установленный в конфиге webpack полный путь до папки img
+//     background: url(@img/textile-2918844_960_720-min-min.jpg);
+//     @include size;
 
-    // .main__test
-    &__test {
-        //  чтобы передать параметр внезовисимости от последовательности аргрументов
-        //  нужно указать  название аргумента и передать значение $color: yellow
-        //  Если же в миксине все попорядку, о такой гемор не нужен
-        @include sizeAndColor(100px, $color: yellow);
-    }
-}
+//     // .main__test
+//     &__test {
+//         //  чтобы передать параметр внезовисимости от последовательности аргрументов
+//         //  нужно указать  название аргумента и передать значение $color: yellow
+//         //  Если же в миксине все попорядку, о такой гемор не нужен
+//         @include sizeAndColor(100px, $color: yellow);
+//     }
+// }
 
-.textClassinDiv {
-    color: $Dark_Shade_25;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    word-spacing: 10px;
-    text-shadow: 3px 2px $Dark_Shade_25;
-}
+// .textClassinDiv {
+//     color: $Dark_Shade_25;
+//     text-align: center;
+//     text-transform: capitalize;
+//     letter-spacing: 3px;
+//     word-spacing: 10px;
+//     text-shadow: 3px 2px $Dark_Shade_25;
+// }
 
-.textShow {
-    color: $Dark_Shade_25;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    word-spacing: 10px;
-}
+// .textShow {
+//     color: $Dark_Shade_25;
+//     text-align: center;
+//     text-transform: capitalize;
+//     letter-spacing: 3px;
+//     word-spacing: 10px;
+// }
