@@ -12,6 +12,7 @@
     justify-content: space-between;
 
     &__ul {
+        // margin-left: 80px;
     }
 
     &__link {
@@ -21,6 +22,7 @@
 
     &__list {
         margin: 20px 0px 0px 0px;
+        max-width: 250px;
     }
 
     li {
@@ -28,6 +30,14 @@
     }
 }
 
+.form-text-content {
+    width: 260px;
+    height: 44px;
+    border: 1px solid $Dark_Shade_25;
+    border-radius: 2px;
+    display: flex;
+    padding: 0px 0px 0px 15px;
+}
 .footer-menu-logo {
     max-width: 260px;
 }

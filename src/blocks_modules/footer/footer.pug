@@ -40,7 +40,11 @@ footer.footer
         ul.footer-menu__ul
           li.darck100 ПОДПИСКА
           li.footer-menu__list Получайте специальные предложения и новости сервиса
-          .footer-menu__list.footer_email Email 
+          .footer-menu__list.footer_email
+            form(action="#" method="post")
+              .form-text-content
+                input(type="text" placeholder="Email")
+
 
     .footer__bot
       .bot-left Copyright © 2018 Toxin отель. Все права защищены.
