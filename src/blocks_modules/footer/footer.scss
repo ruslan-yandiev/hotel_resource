@@ -3,7 +3,10 @@
 .footer__top {
     display: flex;
     align-items: center;
-    height: 372px;
+
+    @media (min-width: $md2+px) {
+        height: 372px;
+    }
 }
 
 .footer-menu {
@@ -12,6 +15,11 @@
     justify-content: space-between;
 
     &__ul {
+        @media (max-width: $md2+px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__link {
@@ -22,10 +30,19 @@
     &__list {
         margin: 20px 0px 0px 0px;
         max-width: 250px;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+        }
     }
 
     li {
         margin: 20px 0px 0px 0px;
+    }
+
+    @media (max-width: $md2+px) {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -38,6 +55,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px 0px 15px;
+
+    input {
+        transition: all 0.6s ease 0s;
+        opacity: 0.4;
+    }
+
+    input:hover {
+        transition: all 0.6s ease 0s;
+        opacity: 1;
+    }
 }
 
 //====== arrow ===================================
@@ -97,6 +124,16 @@
 
 .footer-menu-logo {
     max-width: 260px;
+
+    @media (max-width: $md2+px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+            text-align: center;
+        }
+    }
 }
 
 .darck100 {
@@ -111,10 +148,24 @@
     align-items: center;
     height: 70px;
     border-top: 1px solid $Dark_Shade_25;
+
+    @media (max-width: $md2+px) {
+        margin-top: 40px;
+    }
+
+    @media (max-width: 561px) {
+        flex-direction: column;
+        padding: 60px 0px 120px 0px;
+    }
 }
 
 .bot-left {
     font-family: 'Montserrat_400', sans-serif;
+
+    @media (max-width: 561px) {
+        margin-bottom: 25px;
+        text-align: center;
+    }
 }
 
 .bot-right {
