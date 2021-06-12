@@ -11,7 +11,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 console.log('IS DEV:', isDev);
-const PUG_PAGES_PATH = path.resolve(__dirname, 'src/pug/pages');
+const PAGES_PATH = path.resolve(__dirname, 'src/pages');
 
 const optimization = () => {
     const config = {
@@ -33,12 +33,12 @@ const plugins = () => {
     const basePlugins = [
         // new BundleAnalyzerPlugin(), // пока закоментируем чтобы не мешал
         new HtmlWebpackPlugin({
-            template: `${PUG_PAGES_PATH}/index.pug`,
+            template: `${PAGES_PATH}/index.pug`,
             inject: 'body',
         }),
         new HtmlWebpackPlugin({
             filename: 'new-index.html',
-            template: `${PUG_PAGES_PATH}/new-index.pug`,
+            template: `${PAGES_PATH}/new-index.pug`,
             inject: 'body',
         }),
         new CleanWebpackPlugin(),
@@ -144,7 +144,7 @@ module.exports = {
             },
 
             {
-                test: /\.(woff|woff2|ttf|eot)$/,
+                test: /\.(woff|woff2|ttf|eot|svg)$/,
                 use: ['file-loader'],
             },
         ],

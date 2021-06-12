@@ -1,62 +1,100 @@
-@import '~normalize.css'; // ! так мы заимпортили подключили (благодаря webpack а не sass) файлы из node_modules
+// @import '~normalize.css'; // null как ни как удобнее чем normalize (субъективно)
 @import 'color.scss';
-@import 'fonts.scss';
+@import 'mixins.scss';
+
+// ========================= Переменные ===============================/
+$minwidth: 320px;
+
+// * Общая ширина контейнера с контентом для всего ресурса
+$mw: 1200;
+$md1: $mw + 12;
+$md2: 918.98;
+$md3: 767.98;
+$md4: 479.98;
+//--------------------------/Переменные/ ------------------------------/
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat_400', sans-serif;
+    color: $Dark_Shade_75;
+    font-size: 14px;
+    line-height: 24px;
+
+    &._lock {
+        @media (max-width: $md2+px) {
+            overflow: hidden;
+        }
+    }
 }
 
 h1 {
-    color: $color_1;
+    color: $Dark_Shade_100;
+    font-family: 'Montserrat_700', sans-serif;
+    font-size: 24px;
+    line-height: 29.26px;
 }
 
 h2 {
-    color: $color_2;
+    color: $Dark_Shade_100;
+    font-family: 'Montserrat_700', sans-serif;
+    font-size: 19px;
+    line-height: 23.16px;
 }
 
-@mixin size {
-    width: 300px;
-    height: 300px;
+h3 {
+    font-family: 'Montserrat_700', sans-serif;
+    font-size: 12px;
+    line-height: 14.63px;
+    text-transform: uppercase;
 }
 
-// * можем ставить дефолтные значения аргументов
-@mixin sizeAndColor($h, $w: 200px, $color: red) {
-    width: $w;
-    height: $h;
-    background: $color;
+ul li {
+    list-style: none;
 }
 
-.main {
-    // @img установленный в конфиге webpack полный путь до папки img
-    background: url(@img/textile-2918844_960_720-min-min.jpg);
-    @include size;
-
-    // .main__test
-    &__test {
-        // * чтобы передать параметр внезовисимости от последовательности аргрументов
-        // * нужно указать  название аргумента и передать значение $color: yellow
-        // * Если же в миксине все попорядку, о такой гемор не нужен
-        @include sizeAndColor(100px, $color: yellow);
-    }
+ul {
+    list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
+// =======================================
+
+// ============================ Оболочка ===================================/
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+//------------------------------/Оболочка/ -------------------------------/
+
+// ============================ Основная сетка =========================/
+._container {
+    max-width: $mw + px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    // @media (max-width: $md1+px) {
+    //     max-width: 970px;
+    // }
+
+    // @media (max-width: $md2+px) {
+    //     max-width: 750px;
+    // }
+
+    // @media (max-width: $md3+px) {
+    //     max-width: none;
+    //     padding: 0 10px;
+    // }
+}
+//------------------------------/Основная сетка/--------------------------/
 
 .code {
     color: fuchsia;
 }
 
-.textClassinDiv {
-    color: red;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    word-spacing: 10px;
-    // text-shadow: 3px 2px red;
-}
-
-.textShow {
-    color: red;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    word-spacing: 10px;
+.content-wrapper {
+    background-color: rgb(218, 165, 115);
 }

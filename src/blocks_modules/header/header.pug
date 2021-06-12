@@ -1,0 +1,29 @@
+- var btn_collection = [['__log-in', 'войти'], ['__sign-up', 'зарегистрироваться']];
+- var list = ['Услуга 1', 'Услуга 2', 'Услуга 3'];
+- var list2 = ['Соглашение 1', 'Длинное название соглашения 2', 'Соглашение 3'];
+
+header.header
+  .header__container._container
+    +burger_menu
+
+    a.header__logo(href="/")
+      img(src="img/Logo.svg", alt="img")
+    .header__menu.menu
+      nav.menu__body
+        ul.menu__list
+          li.menu__list_li
+            a(href="").menu__link О нас
+          li.menu__list_li
+            +accordion-menu('Услуги' , list)
+          li.menu__list_li
+            a(href="").menu__link Вакансии
+          li.menu__list_li
+            a(href="").menu__link Новости
+          li.menu__list_li
+            +accordion-menu('Соглашения' , list2)
+
+        +btn(btn_collection, 'header-btn-menu')
+
+    .header__actions.actions-header
+      .actions-header__btn
+        +btn(btn_collection, 'header-btn')

@@ -1,0 +1,102 @@
+// TODO можно многое вынести в миксины
+
+@import '../../styles/style.scss';
+
+.accordion-menu {
+    padding: 0;
+}
+
+.accordion-menu__contener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $md2+px) {
+        flex-direction: column;
+    }
+}
+
+.accordion-menu__arrow {
+    order: 1;
+    margin: 0px 0px 0px 10px;
+
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid $Dark_Shade_50;
+    border-bottom: 2px solid $Dark_Shade_50;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    transition: all 0.3s ease 0s;
+    position: relative;
+    bottom: 1px;
+
+    @media (max-width: $md2+px) {
+        border-right: 2px solid $Purple;
+        border-bottom: 2px solid $Purple;
+        width: 10px;
+        height: 10px;
+        margin: 5px 0px 0px 0px;
+    }
+}
+
+._reverse_arrow {
+    transform: rotate(-135deg);
+    transition: all 0.3s ease 0s;
+}
+
+.dropdownlink {
+    cursor: pointer;
+    @media (max-width: $md2+px) {
+        color: $Purple;
+        font-size: 24px;
+    }
+}
+
+.submenuItems {
+    margin: 0;
+    padding: 0;
+
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.8s ease 0s;
+
+    background: $white;
+    margin-top: 20px;
+
+    li {
+        border-bottom: 1px solid #b6b6b6;
+    }
+
+    @media (max-width: $md2+px) {
+        display: none;
+        width: 100%;
+    }
+
+    @media (min-width: $md2+px) {
+        position: absolute;
+        top: 50px;
+    }
+}
+
+.submenuItems a {
+    display: block;
+    color: $Dark_Shade_75;
+    padding: 12px 12px 12px 12px;
+
+    &:hover {
+        background-color: $Purple;
+        color: $white;
+    }
+}
+.visibility {
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.8s ease 0s;
+
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+}
