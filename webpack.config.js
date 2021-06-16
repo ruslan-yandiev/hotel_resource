@@ -37,8 +37,8 @@ const plugins = () => {
             inject: 'body',
         }),
         new HtmlWebpackPlugin({
-            filename: 'new-index.html',
-            template: `${PAGES_PATH}/new-index.pug`,
+            filename: 'sign-in.html',
+            template: `${PAGES_PATH}/sign-in.pug`,
             inject: 'body',
         }),
         new CleanWebpackPlugin(),
