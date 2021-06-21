@@ -20,10 +20,9 @@ html(lang="en")
       //- подключим хедер
       include ../blocks_modules/header/header
     
-      main(class=mainClass)
-        .content-wrapper
-          //- тут будет основной контент
-          block content
+      main(class=mainClass, style=mainStyle)
+        //- тут будет основной контент
+        block content
 
       //- подключим футер
       include ../blocks_modules/footer/footer

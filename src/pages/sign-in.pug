@@ -3,9 +3,10 @@ extends ../layouts/main
 block variables
   - var title = "Sign in";
   - var description = "description for Webpack + pug №2";
-  - var pageClass = "sign_in";
-  - var mainClass = 'main_sign_in';
+  - var pageClass = "sign-in";
+  - var mainClass = "background-sign";
+  - var mainStyle = 'background-image: url("img/sign_in.jpg");';
 
 block content
-  img(src="img/sign_in.jpg", class="background")
+  include ../blocks_modules/sign-in/sign-in
 
