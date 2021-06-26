@@ -21,8 +21,9 @@ html(lang="en")
       include ../blocks_modules/header/header
     
       main(class=mainClass, style=mainStyle)
-        //- тут будет основной контент
-        block content
+        .wrapper-content
+          //- тут будет основной контент
+          block content
 
       //- подключим футер
       include ../blocks_modules/footer/footer

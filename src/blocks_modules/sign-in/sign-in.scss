@@ -1,0 +1,49 @@
+@import '../../styles/style.scss';
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 358px;
+    background-color: #ffff;
+
+    h1 {
+        margin: 40px 30px 20px 30px;
+    }
+
+    input {
+        transition: all 0.4s ease 0s;
+        opacity: 0.6;
+    }
+
+    input:hover {
+        transition: all 0.3s ease 0s;
+        border: 1px solid black;
+        opacity: 1;
+    }
+
+    &__user {
+        //! альтернатива миксинам, через расширенное наследование 
+        @extend %border;
+    }
+
+    &__pass {
+        //! альтернатива миксинам, через расширенное наследование 
+        @extend %border;
+    }
+
+    &__btn {
+        margin: 0px 30px 30px 30px;
+    }
+}
+
+// .wrapper-content {
+//     width: 100%;
+//     height: 740;
+// }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
