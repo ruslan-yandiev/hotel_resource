@@ -1,11 +1,14 @@
 - var text_error = "XXXXXXXXXXXXXXXXXX";
 
-mixin btn(arr, btn_class)
-  .btn
-    - if(Array.isArray(arr))
-      div(class=btn_class)
-        - for (var i = 0; i < arr.length; i++)
-          div(class=btn_class+arr[i][0])
-            a(class=btn_class+arr[i][0]+'_main') #{arr[i][1]}
-    - else
-        a.btn-error #{text_error}
+mixin btn(arr, btn_class, type='btn')
+  - if(type === 'btn')
+    .btn
+      - if(Array.isArray(arr))
+        div(class=btn_class)
+          - for (var i = 0; i < arr.length; i++)
+            div(class=btn_class+arr[i][0])
+              a(class=btn_class+arr[i][0]+'_main') #{arr[i][1]}
+      - else
+          a.btn-error #{text_error}
+  - else
+    input(type=arr[0], class=btn_class, value=arr[1])
