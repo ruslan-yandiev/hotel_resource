@@ -1,8 +1,12 @@
 form(action="", method="" class="sign-in-form")
   h1 Войти
-  input(type="text", class="sign-in-form__user", placeholder="Email")
-  input(type="password", class="sign-in-form__pass", placeholder="Пароль")
-  +btn(['submit', 'ВОЙТИ'], 'sign-in-form__btn', 'input')
+  input(type="text", class="sign-in-form__user opacitys", placeholder="Email")
+  input(type="password", class="sign-in-form__pass opacitys", placeholder="Пароль")
+  //- +btn(['submit', 'ВОЙТИ'], 'sign-in-form__btn btn-content__btn', 'input')
+  .btn-content
+    div(type='submit', class='sign-in-form__btn btn-content__btn') войти
+    .btn-arrow-1
+      div
 
   .sign-in__link
     span Нет аккаунта на Toxin?

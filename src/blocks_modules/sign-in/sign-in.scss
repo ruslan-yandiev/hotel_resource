@@ -15,17 +15,6 @@
         margin: 40px 30px 20px 30px;
     }
 
-    input {
-        transition: all 0.4s ease 0s;
-        opacity: 0.6;
-    }
-
-    input:hover {
-        transition: all 0.3s ease 0s;
-        border: 1px solid black;
-        opacity: 1;
-    }
-
     &__user {
         //! альтернатива миксинам, через расширенное наследование
         @extend %border;
@@ -35,12 +24,33 @@
         //! альтернатива миксинам, через расширенное наследование
         @extend %border;
     }
+}
+
+.btn-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px 30px 30px;
+    @include buttonAppearance;
 
     &__btn {
-        margin: 0px 30px 30px 30px;
-        @include buttonAppearance;
+        @include font-family-color-size('Montserrat_700', $white);
+        padding-left: 43%;
     }
 }
+
+// =============== Модификатор ===============================//
+.opacitys{
+    transition: all 0.4s ease 0s;
+    opacity: 0.6;
+}
+
+.opacitys:hover {
+    transition: all 0.3s ease 0s;
+    border: 1px solid black;
+    opacity: 1;
+}
+// ----------------- Модификатор ----------------------------//
 
 // .wrapper-content {
 //     width: 100%;
@@ -52,3 +62,60 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+//====== arrow ===================================
+.btn-arrow-1 {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 44px;
+}
+.btn-arrow-1 div {
+    position: relative;
+    top: 20px;
+    width: 14px;
+    height: 2px;
+    background-color: $white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    left: 0;
+    display: block;
+}
+.btn-arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    top: -3.2px;
+    right: -3px;
+    background-color: $white;
+    transform: rotate(45deg);
+}
+.btn-arrow-1 div::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    top: 3.2px;
+    right: -3px;
+    background-color: $white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-45deg);
+}
+.btn-content:hover {
+    .btn-arrow-1 {
+        animation: btn-arrow-1 1s linear infinite;
+    }
+}   
+
+@keyframes btn-arrow-1 {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+}
+// ------ arrow ----------------------------------
