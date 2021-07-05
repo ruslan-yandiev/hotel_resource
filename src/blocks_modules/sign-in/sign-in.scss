@@ -1,5 +1,11 @@
 @import '../../styles/style.scss';
 
+.wrapper-content {
+    @media (max-width: 561px) {
+        width: 100%;
+    }
+}
+
 .sign-in-form {
     display: flex;
     flex-direction: column;
@@ -11,6 +17,11 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
+    @media (max-width: 561px) {
+        width: 100%;
+        align-items: center;
+    }
+
     h1 {
         margin: 40px 30px 20px 30px;
     }
@@ -18,11 +29,29 @@
     &__user {
         //! альтернатива миксинам, через расширенное наследование
         @extend %border;
+
+        // TODO не получилось через наследование передать новые свойства в media
+        @media (max-width: 561px) {
+            width: 100%;
+            margin: 0px 0px 10px 0px;
+            border: 1px solid $Dark_Shade_25;
+            border-radius: 4px;
+            padding: 0px 0px 0px 15px;
+        }
     }
 
     &__pass {
         //! альтернатива миксинам, через расширенное наследование
         @extend %border;
+
+        // TODO не получилось через наследование передать новые свойства в media
+        @media (max-width: 561px) {
+            width: 100%;
+            margin: 0px 10px 0px 10px;
+            border: 1px solid $Dark_Shade_25;
+            border-radius: 4px;
+            padding: 0px 0px 0px 15px;
+        }
     }
 }
 
@@ -32,6 +61,11 @@
     align-items: center;
     margin: 10px 30px 30px 30px;
     @include buttonAppearance;
+
+    @media (max-width: 561px) {
+        @include buttonAppearance(44px, 100%);
+        margin: 10px 0px 30px 0px;
+    }
 
     &__btn {
         @include font-family-color-size('Montserrat_700', $white);
@@ -123,6 +157,10 @@ main {
 .sign-in-form__link {
     display: flex;
     justify-content: space-around;
+
+    @media (max-width: 561px) {
+        width: 100%;
+    }
 
     span {
         margin-top: 8px;
