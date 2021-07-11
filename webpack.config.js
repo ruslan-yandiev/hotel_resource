@@ -41,6 +41,11 @@ const plugins = () => {
             template: `${PAGES_PATH}/sign-in.pug`,
             inject: 'body',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'registration.html',
+            template: `${PAGES_PATH}/registration.pug`,
+            inject: 'body',
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `styles/${filename('css')}`,
